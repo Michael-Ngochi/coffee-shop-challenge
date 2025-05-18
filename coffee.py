@@ -21,8 +21,10 @@ class Coffee:
         from order import Order
         count= sum(1 for order in Order.all() if order.coffee == self)
         return count
-
- 
+    def average_price(self):
+        from order import Order
+        prices= [order.price for order in Order.all() if order.coffee == self]
+        return sum(prices) / len(prices) if prices else 0
 
 
 

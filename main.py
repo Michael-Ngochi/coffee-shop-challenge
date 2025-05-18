@@ -19,7 +19,7 @@ Marry= Customer("Marry")
 MyOrd3 = Order(Marry,latte,9.0)
 MyOrd4 = Order(Marry,latte,9.0)
 MyOrd5 = Order(Marry,cold_brew,3.0)
- 
+
 Bob= Customer("Bob")
 MyOrd = Order(Bob,mocha,8.0)
 MyOrd2 = Order(Bob,flat_white,7.0)
@@ -28,19 +28,19 @@ MyOrd6 = Order(Bob,latte,7.0)
 
 # print(MyOrd.customer.name)
 # print(MyOrd.coffee.name)
- 
- 
+
+
 
 # for order in Marry.orders:
 #     print(order.customer.name)
 #     print(order.coffee.name)
 #     print(order.price)
-    
+
 
 
 
 # for coffee in Marry.coffees:
-#     print(coffee.name) 
+#     print(coffee.name)
 
 
 
@@ -48,15 +48,17 @@ MyOrd6 = Order(Bob,latte,7.0)
 #     print(f"{order.customer.name} ordered a {order.coffee.name}")
 
 
-# for customer in latte.customers: 
+# for customer in latte.customers:
 #     print(customer)
 
 
 # Bob.create_order(macchiato,5.0)
 # for coffee in Bob.coffees:
-#     print(coffee.name) 
- 
- 
+#     print(coffee.name)
+
+
 # print(latte.num_orders())
 
- 
+
+# print(mocha.average_price())
+
