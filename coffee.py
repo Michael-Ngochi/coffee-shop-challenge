@@ -20,7 +20,6 @@ class Coffee:
     def num_orders(self):
         from order import Order
         count= sum(1 for order in Order.all() if order.coffee == self)
-        print(f"[DEBUG] Counting orders for {self.name}: {count}")
         return count
 
  
