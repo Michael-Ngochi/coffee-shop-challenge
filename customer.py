@@ -12,10 +12,18 @@ class Customer:
             print("Name should be between 1 to 15 characters")
         else:
             self._name=value
+    @property
+    def orders(self):
+        from order import Order
+        return [order for order in Order.all() if order.customer == self]
+    @property
+    def coffees(self):
+        from coffee import Coffee
+        return list({order.coffee for order in self.orders})
+
+
+    def create_order(self, coffee, price):
+        from order import Order
+        return Order(self, coffee, price)
+
         
-
-
-            
-Bob =Customer("Bob")
-Jane=Customer("Jane")
-print(Bob.name)

@@ -9,6 +9,21 @@ class Coffee:
     @property
     def name(self):
         return self._name
+    @property
+    def orders(self):
+        from order import Order
+        return [order for order in Order.all() if order.coffee == self]
+    @property
+    def customers(self):
+        from order import Order
+        return list({order.customer for order in Order.all() if order.coffee == self})
+    def num_orders(self):
+        from order import Order
+        count= sum(1 for order in Order.all() if order.coffee == self)
+        print(f"[DEBUG] Counting orders for {self.name}: {count}")
+        return count
+
+ 
 
 
-Mocha = Coffee("Mocha")
+
