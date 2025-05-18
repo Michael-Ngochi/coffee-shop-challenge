@@ -25,6 +25,12 @@ class Coffee:
         from order import Order
         prices= [order.price for order in Order.all() if order.coffee == self]
         return sum(prices) / len(prices) if prices else 0
+    @classmethod
+    def most_aficionado(cls,cofee):
+        from order import Order
+        for order in Order.all():
+            pass
+        return cls._all_customers
 
 
 
